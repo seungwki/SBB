@@ -1,0 +1,122 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+#game-container {
+    width: 90vw;
+    height: 90vh;
+    max-width: 1000px;
+    max-height: 800px;
+    background-color: #006633; /* Green felt color */
+    border: 5px solid #3a2a1a;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: 1fr;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#center-field {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.player-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.player-area .hand {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+}
+
+.player-area .discards {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-height: 80px;
+    margin-top: 10px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+/* Player specific layouts */
+#opponent-1 .hand, #opponent-3 .hand {
+    flex-direction: column;
+    height: 100%;
+    width: 60px;
+}
+
+#game-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2em;
+}
+
+#action-buttons {
+    position: absolute;
+    bottom: 12vh;
+    right: 20vw;
+}
+
+#action-buttons button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Mahjong Tile Styles */
+.tile {
+    width: 40px;
+    height: 60px;
+    background-color: #fdf4e3; /* Ivory */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    margin: 2px;
+}
+
+.tile.opponent-tile {
+    background-color: #a0a0a0;
+}
+
+.tile.discarded {
+     width: 30px;
+     height: 45px;
+     font-size: 20px;
+     cursor: default;
+}
+
+.tile.opponent-1, .tile.opponent-3 {
+    width: 60px;
+    height: 40px;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Riichi Mahjong</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Web Riichi Mahjong</h1>
+    <div id="game-container">
+        <!-- Opponent 2 (Top) -->
+        <div id="opponent-2" class="player-area opponent">
+            <div class="hand"></div>
+            <div class="discards"></div>
+        </div>
+
+        <div id="center-field">
+            <!-- Opponent 1 (Left) -->
+            <div id="opponent-1" class="player-area opponent">
+                <div class="hand"></div>
+                <div class="discards"></div>
+            </div>
+
+            <!-- Game Info & Wall -->
+            <div id="game-info">
+                <div id="round-info"></div>
+                <div id="wall-info"></div>
+            </div>
+
+            <!-- Opponent 3 (Right) -->
+            <div id="opponent-3" class="player-area opponent">
+                <div class="hand"></div>
+                <div class="discards"></div>
+            </div>
+        </div>
+
+        <!-- Player (Bottom) -->
+        <div id="player" class="player-area">
+            <div class="hand"></div>
+            <div class="discards"></div>
+        </div>
+
+        <div id="action-buttons">
+            <!-- Buttons for Pon, Chi, Kan, Riichi, Ron will be added here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
