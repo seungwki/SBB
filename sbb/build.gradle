@@ -21,15 +21,23 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools' 
+//	dev tools
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	//lombok 
 	compileOnly 'org.projectlombok:lombok' 
-    annotationProcessor 'org.projectlombok:lombok' 
+    annotationProcessor 'org.projectlombok:lombok'
+    //h2 db 
     runtimeOnly 'com.h2database:h2'
+    //jpa
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    //j unit
 	testImplementation 'org.junit.jupiter:junit-jupiter' 
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    //thymeleaf
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+//    Spring Boot Validation, doc : https://beanvalidation.org/
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
 }
 
 tasks.named('test') {
